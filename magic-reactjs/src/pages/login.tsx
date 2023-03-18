@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 import { magic } from '../libs/magic';
 
 interface Props {
-  setAccount: React.Dispatch<React.SetStateAction<string | null>>;
+  setAccount: React.Dispatch<React.SetStateAction<string | null> >;
 }
 
 const Login = ({ setAccount }: Props) => {
@@ -30,6 +30,7 @@ const Login = ({ setAccount }: Props) => {
 
   return (
 	<div>
+    <h1> Login page </h1>
 		<button onClick={connect} disabled={disabled}> Login </button>
     </div>
   );

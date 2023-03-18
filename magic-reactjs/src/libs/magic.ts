@@ -22,6 +22,6 @@ const formattedNetwork = (): EthNetworkConfiguration => {
   }
 };
 
-export const magic = new Magic(process.env.REACT_APP_MAGIC_API_KEY as string, {
+export const magic = new Magic("pk_live_3EAC7F93725A4C30" as string, {
   network: formattedNetwork(),
 });
