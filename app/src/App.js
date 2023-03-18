@@ -1,11 +1,20 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-//import CreateContract from './components/createcontract'
+import { Routes, Route } from "react-router-dom";
+
+import CreateContract from './components/createcontract/CreateContract';
+import Login from './components/login/Login';
 
 function App() {
   return (
+    <>
+    <header />
     <div className="App">
-      <header className="App-header">
+        <Routes>
+          <Route path="/" element={<Login />}></Route>
+          <Route path="/createcontract" element={<CreateContract />}></Route>
+        </Routes>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +27,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
+    </>
   );
 }
 
