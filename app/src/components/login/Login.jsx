@@ -5,7 +5,8 @@ import CreateContract from '../createcontract/CreateContract';
 const Login = () => {
     return (
         <div>
-            <p>Login page</p>
+            <h1>Login</h1>
+            <p>Enter your email address and we will send you a link to access to your personal area.</p>
         </div>
     );
     }
