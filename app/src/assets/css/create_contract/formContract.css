@@ -12,6 +12,8 @@
 
 .form-contract {
     position: absolute;
+    z-index: 2;
+    top: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

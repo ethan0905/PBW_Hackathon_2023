@@ -6,7 +6,7 @@ const CreateContract = () => {
   return (
     <div className="bg-form">
       <form className="form-body">
-        <div className="form-contract">
+        <div>
           <div className="form-contract">
             <div className="label-contract-form">
               <h1>Create your contract</h1>
