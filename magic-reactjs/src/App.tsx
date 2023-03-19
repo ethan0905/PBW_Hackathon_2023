@@ -30,13 +30,16 @@ const magic = new Magic("pk_live_FCF04103A9172B45", {
 export default function App() {
   const [email, setEmail] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userMetadata, setUserMetadata] = useState({});
+  const [userMetadata, setUserMetadata] = useState({
+    email: "",
+    publicAddress: ""
+  });
   const [balance, setBalance] = useState(0);
   const [destinationAddress, setDestinationAddress] = useState("");
   const [sendAmount, setSendAmount] = useState(0);
   const [txHash, setTxHash] = useState("");
   const [sendingTransaction, setSendingTransaction] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+  // const [disabled, setDisabled] = useState(false);
 
   const connection = new web3.Connection(rpcUrl);
 
@@ -45,14 +48,14 @@ export default function App() {
       setIsLoggedIn(magicIsLoggedIn);
       if (magicIsLoggedIn) {
         magic.user.getMetadata().then((user) => {
-          setUserMetadata(user);
+          setUserMetadata(user => ({...user, email: user.email, publicAddress: user.publicAddress}));
           console.log(user);
           const pubKey = new web3.PublicKey(user.publicAddress!);
           getBalance(pubKey);
         });
       }
     });
-  }, [isLoggedIn]);
+  }, [isLoggedIn, userMetadata.email, userMetadata.publicAddress]);
 
   const login = async () => {
     await magic.auth.loginWithMagicLink({ email });
@@ -127,7 +130,7 @@ export default function App() {
           <input
             type="email"
             name="email"
-            required="required"
+            required
             placeholder="Enter your email"
             onChange={(event) => {
               setEmail(event.target.value);
@@ -137,10 +140,12 @@ export default function App() {
         </div>
       ) : (
         <div>
-          <div className="container">
-            <h1>Current user: {userMetadata.email}</h1>
-            <button onClick={logout}>Logout</button>
-          </div>
+            {userMetadata.email === "" ? (<div></div>):(
+            <div className="container">
+              <h1>Current user: {userMetadata.email}</h1>
+              <button onClick={logout}>Logout</button>
+            </div>
+            )}
           <div className="container">
             <h1>Solana address</h1>
             <div className="info">{userMetadata.publicAddress}</div>
@@ -151,7 +156,7 @@ export default function App() {
             {/* <button onClick={requestSol} disabled={disabled}>
               Get 1 Test SOL
             </button> */}
-            {disabled && <div>Requesting airdrop...</div>}
+            {/* {disabled && <div>Requesting airdrop...</div>} */}
           </div>
           <div className="container">
             <h1>Send Transaction</h1>
@@ -169,7 +174,7 @@ export default function App() {
               type="text"
               name="destination"
               className="full-width"
-              required="required"
+              required
               placeholder="Destination address"
               onChange={(event) => {
                 setDestinationAddress(event.target.value);
@@ -179,10 +184,12 @@ export default function App() {
               type="text"
               name="amount"
               className="full-width"
-              required="required"
+              required
               placeholder="Amount in LAMPORTS"
               onChange={(event) => {
-                setSendAmount(event.target.value);
+                let value:number = event.target.value.toString() as unknown as number;
+                if (typeof value === "number")
+                  setSendAmount(value);
               }}
             />
             <button id="btn-send-txn" onClick={handleSendTransaction}>
