@@ -15,13 +15,9 @@ And that’s how we thought about Payconsent.
 
 ## 📔 Summary
 
- - [❗ Problem](#-problem)
- - [✅ Solution](#-solution)
- - [⚙️ How to run the project ?](#%EF%B8%8F-how-to-run-the-project-)
- - [🦶 Step to use Payconsent](%-step-to-use-payconsent)
- - [💡 Technological invasion](%-technological-invasion)
- - [📈 Business model](#-business-model)
- - [🖥️ Development perspective](#%EF%B8%8F-development-perspective)
+ - ❗ Problem
+ - ✅ Solution
+ - ⚙️ How to run the project ?
 
 ## ❗ Problem
 #### What problem does your project solve? 
