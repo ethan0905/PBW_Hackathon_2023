@@ -16,6 +16,7 @@ const Login = () => {
                             <p>Enter your email address and we will send you a link to access to your personal area.</p>
                         </div>
                         <button className="btn" onClick={() => navigate("/dashboard")}>Continue with your email</button>
+                        <button className="btn-wallet" onClick={() => navigate("/dashboard")}>Continue with your wallet</button>
                     </div>
                 </div>
             </div>
