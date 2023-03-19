@@ -2,17 +2,25 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 
-import CreateContract from './components/createcontract/CreateContract';
+import FirstStep from './components/firststep/FirstStep';
+import SecondStep from './components/secondstep/SecondStep';
 import Login from './components/login/Login';
+import Dashboard from './components/dashboard/Dashboard';
+import CreateContract from './components/createcontract/CreateContract';
+import Summary from './components/summary/summary';
 
 function App() {
   return (
     <>
-    <header />
+    <header/>
     <div className="App">
         <Routes>
-          <Route path="/" element={<Login />}></Route>
+          <Route path='/' element={<FirstStep />}></Route>
+          <Route path='/second' element={<SecondStep />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path='/dashboard' element={<Dashboard />}></Route>
           <Route path="/createcontract" element={<CreateContract />}></Route>
+          <Route path="/" element={<Summary />}></Route>
         </Routes>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
