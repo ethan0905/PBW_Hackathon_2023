@@ -20,7 +20,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path='/dashboard' element={<Dashboard />}></Route>
           <Route path="/createcontract" element={<CreateContract />}></Route>
-          <Route path="/" element={<Summary />}></Route>
+          <Route path="/summary" element={<Summary />}></Route>
         </Routes>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
