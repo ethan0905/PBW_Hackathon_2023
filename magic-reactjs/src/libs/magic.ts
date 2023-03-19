@@ -6,17 +6,17 @@ const formattedNetwork = (): EthNetworkConfiguration => {
   switch (network) {
     case Networks.Optimism:
       return {
-        rpcUrl: process.env.REACT_APP_OPTIMISM_RPC_URL as string,
+        rpcUrl: "https://goerli.optimism.io/" as string,
         chainId: 420,
       };
     case Networks.Polygon:
       return {
-        rpcUrl: process.env.REACT_APP_POLYGON_RPC_URL as string,
+        rpcUrl: "https://rpc-mumbai.maticvigil.com/" as string,
         chainId: 80001,
       };
     default:
       return {
-        rpcUrl: process.env.REACT_APP_ETHEREUM_RPC_URL as string,
+        rpcUrl: "https://eth-goerli.g.alchemy.com/v2/3jKhhva6zBqwp_dnwPlF4d0rFZhu2pjD/" as string,
         chainId: 5,
       };
   }

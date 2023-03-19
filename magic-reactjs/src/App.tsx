@@ -2,6 +2,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import Login from './pages/login';
+import TokenBalance from './components/erc20-tokens/token-balance';
+import UserInfo from './components/wallet';
 // import Home from './pages/home';
 // import './styles.css';
 
@@ -33,7 +35,7 @@ import Login from './pages/login';
 function App() {
   const [account, setAccount] = useState<string | null>(localStorage.getItem('user'));
   // return !account ? <Login setAccount={setAccount} /> : <Home setAccount={setAccount} />;
-  return !account ? <Login setAccount={setAccount} /> : <Login setAccount={setAccount} />;
+  return !account ? <Login setAccount={setAccount} /> : <UserInfo setAccount={setAccount}/>;
 }
 
 export default App;
