@@ -1,3 +1,10 @@
+.bg-login {
+    background-image: url("../../img/BG_PBW.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
 .next-button {
     display: flex;
     flex-direction: row;

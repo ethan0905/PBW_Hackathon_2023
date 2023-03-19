@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material";
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
+import "../../assets/css/first_step/FirstStep.css"
 
 function ProgressMobileStepper() {
     const theme = useTheme();
@@ -38,6 +39,7 @@ function ProgressMobileStepper() {
 
 const FirstStep = () => {
     return (
+      // <html>
         <div>
             <form>
             <h1>
@@ -50,6 +52,7 @@ const FirstStep = () => {
             </h4>
             </form>
         </div>
+      // </html>
     );
     }
 
