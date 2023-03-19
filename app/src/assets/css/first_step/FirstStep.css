@@ -1,0 +1,41 @@
+.bg-login {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    background-image: url("../../img/BG_PBW.png");
+    background-repeat: no-repeat center center;
+    background-size:cover;
+    
+}
+
+.title-style {
+    position:absolute;
+    z-index: 3;
+    background-color: transparent;
+    left: 29%;
+    top: 30%;
+    color: white;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    font-size: 32px;
+}
+
+.text-style {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px 20px 0 0;
+    border: 0;
+  }
+.next-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: baseline;
+}
