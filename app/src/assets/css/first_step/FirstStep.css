@@ -2,8 +2,6 @@
     position: relative;
     z-index: 1;
     margin: 0;
-    /* display: flex; */
-    /* justify-content: center; */
     background-image: url("../../img/BG_PBW.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,13 +40,6 @@
     flex: column;
     gap: 20px;
 }
-
-/* .next-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: baseline;
-} */
 
 .box-start-div {
     display: flex;
@@ -100,11 +91,7 @@
     padding-right: 5px;
     width: 100px;
     padding: 8px 20px;
-    /* border-radius: 8px; */
     font-size: 16px;
-    /* font-weight: bold; */
-    /* cursor: pointer; */
-    /* box-shadow: 0 10px 20px rgb(0 0 0 / 5%); */
 }
 
 .btn-div-start {
@@ -112,7 +99,6 @@
     justify-content: space-between;
     padding-right: 40px;
     padding-left: 10px;
-    /* align-items: flex-end; */
 }
 
 .loader1 {
