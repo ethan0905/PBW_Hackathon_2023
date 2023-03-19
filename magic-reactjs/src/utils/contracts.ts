@@ -9,6 +9,8 @@ const getStorageContractAddress = () => {
       return '0xB7e7313C95b4dB35aB50760c31f29d1AA4679452';
     case Networks.Optimism:
       return '0xB7e7313C95b4dB35aB50760c31f29d1AA4679452';
+    case Networks.Solana:
+      return '0xB7e7313C95b4dB35aB50760c31f29d1AA4679452';
     default:
       return '0xb57a27201b207E01c2b6781AB18fe1faA924f5CC';
   }

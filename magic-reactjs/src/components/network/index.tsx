@@ -4,7 +4,7 @@ import Check from '../../images/check.svg';
 import { Networks } from '../../utils/networks';
 
 const Network = () => {
-  const networkOptions = [Networks.Ethereum, Networks.Polygon, Networks.Optimism];
+  const networkOptions = [Networks.Ethereum, Networks.Polygon, Networks.Optimism, Networks.Solana];
   const [isOpen, setIsOpen] = useState(false);
   const [network, setNetwork] = useState(localStorage.getItem('network') || Networks.Ethereum);
 
@@ -12,6 +12,7 @@ const Network = () => {
     if (networkOption !== network) {
       setNetwork(networkOption);
       localStorage.setItem('network', networkOption);
+      console.log(networkOption);
       window.location.reload();
     }
   };
