@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { TextField, Button, FormGroup } from "@mui/material"
 import CreateContract from '../createcontract/CreateContract';
 import "../../assets/css/summary/summary.css";
+import { useNavigate } from "react-router-dom";
 
 const Summary = () => {
+    const navigate = useNavigate();
     return (
         <div className="bg-form">
             <form className="form-body">
@@ -18,12 +20,12 @@ const Summary = () => {
                      <div className="label-summary-form">
                         <label>Project Name</label>
                         <hr></hr>
-                        <input className="select-box" type="text" />
+                        <p className="label-summary-form">Front-end service</p>
                     </div>
                     <div className="label-summary-form">
                         <label>Name of the freelancer</label>
                         <hr></hr>
-                        <input className="select-box" type="text" />
+                        <p className="label-summary-form">Ethan S.</p>
                     </div>
                     <div className="label-summary-form">
                         <label>File to attach</label>
@@ -37,8 +39,8 @@ const Summary = () => {
                     </div>
                     <div className="label-summary-form">Amount To Recieve</div>
                     <p align="left">$ 2000</p>
-                    <Button variant="contained">Validate</Button>
-                    <Button variant="outlined" >Decline</Button>
+                    <button className="btn" onClick={navigate("/dashboard")}>Validate</button>
+                    <button className="btn_decline" onClick={navigate("/dashboard")}>Decline</button>
                 </div>
                 </div>
             </form>
