@@ -16,11 +16,11 @@ function App() {
     <div className="App">
         <Routes>
           <Route path='/' element={<FirstStep />}></Route>
-          <Route path='/second' element={<SecondStep />}></Route>
+          {/* <Route path='/second' element={<SecondStep />}></Route> */}
           <Route path="/login" element={<Login />}></Route>
           <Route path='/dashboard' element={<Dashboard />}></Route>
           <Route path="/createcontract" element={<CreateContract />}></Route>
-          <Route path="/summary" element={<Summary />}></Route>
+          {/* <Route path="/summary" element={<Summary />}></Route> */}
         </Routes>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
