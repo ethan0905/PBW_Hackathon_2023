@@ -1,0 +1,92 @@
+.dash-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1F0F6;
+    height: 100vh;
+}
+
+.dash-board-1 {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    background-color: #F1F0F6;
+    gap: 30px;
+    /* height: 100vh; */
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.blocks p {
+    padding-bottom: 10px;
+}
+
+.graph-box {
+
+    background-image: url("../../img/Group\ 1108.png");
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 153px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.logo-dash {
+    background-image: url("../../img/Group\ 1091Payconsent.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 310px;
+    height: 20px;
+    /* width: 100%; */
+}
+
+.trans-box {
+
+    background-image: url("../../img/Board.png");
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 296px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.nav-bar-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.nav-bar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 390px;
+    height: 76px;
+    background-color: #ffffff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.create-contract-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    background-color: transparent;
+    border-style: none;
+    background-image: url("../../img/bouton-create.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
