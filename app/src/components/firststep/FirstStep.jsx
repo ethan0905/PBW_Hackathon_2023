@@ -28,7 +28,7 @@ const FirstStep = () => {
               <div className="loader2"></div>
               <div className="loader3"></div>
             </div>
-            <button className="btn-start" onClick={navigate("/login")}>Next</button>
+            <button className="btn-start" onClick={() => navigate("/login")}>Next</button>
           </div>
         </div>
       </div>

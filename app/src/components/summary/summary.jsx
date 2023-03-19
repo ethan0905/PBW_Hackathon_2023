@@ -39,8 +39,8 @@ const Summary = () => {
                     </div>
                     <div className="label-summary-form">Amount To Recieve</div>
                     <p align="left">$ 2000</p>
-                    <button className="btn" onClick={navigate("/dashboard")}>Validate</button>
-                    <button className="btn_decline" onClick={navigate("/dashboard")}>Decline</button>
+                    <button className="btn" onClick={() => navigate("/dashboard")}>Validate</button>
+                    <button className="btn_decline" onClick={() => navigate("/dashboard")}>Decline</button>
                 </div>
                 </div>
             </form>

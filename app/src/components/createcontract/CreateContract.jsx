@@ -42,7 +42,7 @@ const CreateContract = () => {
               <input className="select-box" type="text" />
             </div>
             <div className="label-contract-form">
-              <button className="btn" onClick={navigate("/dashboard")}>Create Contract</button>
+              <button className="btn" onClick={() => navigate("/dashboard")}>Create Contract</button>
             </div>
           </div>
         </div>
