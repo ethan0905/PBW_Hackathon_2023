@@ -1,8 +1,10 @@
 import { width } from "@mui/system";
 import React from "react";
 import "../../assets/css/create_contract/formContract.css";
+import { useNavigate } from "react-router-dom";
 
 const CreateContract = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-form">
       <form className="form-body">
@@ -40,7 +42,7 @@ const CreateContract = () => {
               <input className="select-box" type="text" />
             </div>
             <div className="label-contract-form">
-              <button className="btn">Create Contract</button>
+              <button className="btn" onClick={() => navigate("/dashboard")}>Create Contract</button>
             </div>
           </div>
         </div>
