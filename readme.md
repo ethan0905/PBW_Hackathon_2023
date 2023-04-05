@@ -4,6 +4,7 @@
   <img src="img/landing.png" width="200" height="auto" />
   <img src="img/dash.png" width="200" height="auto" />
 </div>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=ethan0905&label=pbw%20views&color=0e75b6&style=flat" alt="jcluzet" /> </p>
 
 This project was created for the 2023 Paris Blockchain Week Hackathon.
 
